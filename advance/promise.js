@@ -1,25 +1,25 @@
-const promiseOne = new Promise(function(resolve, reject){
-    //Do an async task
-    // DB calls, cryptography, network
-    setTimeout(function(){
-        console.log('Async task is compelete');
-        resolve()
-    }, 1000)
-})
+// const promiseOne = new Promise(function(resolve, reject){
+//     //Do an async task
+//     // DB calls, cryptography, network
+//     setTimeout(function(){
+//         console.log('Async task is compelete');
+//         resolve()
+//     }, 1000)
+// })
 
-promiseOne.then(function(){
-    console.log("Promise consumed");
-})
+// promiseOne.then(function(){
+//     console.log("Promise consumed");
+// })
 
-new Promise(function(resolve, reject){
-    setTimeout(function(){
-        console.log("Async task 2");
-        resolve()
-    }, 1000)
+// new Promise(function(resolve, reject){
+//     setTimeout(function(){
+//         console.log("Async task 2");
+//         resolve()
+//     }, 1000)
 
-}).then(function(){
-    console.log("Async 2 resolved");
-})
+// }).then(function(){
+//     console.log("Async 2 resolved");
+// })
 
 const promiseThree = new Promise(function(resolve, reject){
     setTimeout(function(){
@@ -60,7 +60,7 @@ const promiseFive = new Promise(function(resolve, reject){
         if (!error) {
             resolve({username: "javascript", password: "123"})
         } else {
-            reject('ERROR: JS went wrong')
+            reject('ERROR: JS went wrong') 
         }
     }, 1000)
 });
@@ -74,29 +74,29 @@ async function consumePromiseFive(){
     }
 }
 
-consumePromiseFive()
+// consumePromiseFive()
 
-// async function getAllUsers(){
-//     try {
-//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+// // async function getAllUsers(){
+// //     try {
+// //         const response = await fetch('https://jsonplaceholder.typicode.com/users')
 
-//         const data = await response.json()
-//         console.log(data);
-//     } catch (error) {
-//         console.log("E: ", error);
-//     }
-// }
+// //         const data = await response.json()
+// //         console.log(data);
+// //     } catch (error) {
+// //         console.log("E: ", error);
+// //     }
+// // }
 
-//getAllUsers()
+// //getAllUsers()
 
-fetch('https://api.github.com/users/hiteshchoudhary')
-.then((response) => {
-    return response.json()
-})
-.then((data) => {
-    console.log(data);
-})
-.catch((error) => console.log(error))
+// fetch('https://api.github.com/users/hiteshchoudhary')
+// .then((response) => {
+//     return response.json()
+// })
+// .then((data) => {
+//     console.log(data);
+// })
+// .catch((error) => console.log(error))
 
-// promise.all
-// yes this is also available, kuch reading aap b kro.
+// // promise.all
+// // yes this is also available, kuch reading aap b kro.
